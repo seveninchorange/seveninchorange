@@ -1,0 +1,6 @@
+{
+  "plugins": [
+    "plugin-sass",
+    "plugin-inline-css"
+  ]
+}
