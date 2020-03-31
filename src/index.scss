@@ -15,19 +15,49 @@ body {
   }
 }
 
+h1, h2, h3, h4 {
+  font-family: Sanchez;
+  color: #F47610;
+}
+
+h1 {
+  font-size: 4.5rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+p {
+  font-size: 2rem;
+  line-height: 1.3em;
+}
+
 main {
   display: grid;
   grid-template-columns: 1fr 1fr;
 
   & .section {
-    height: 100vh;
+    min-height: 100vh;
     background-color: white;
 
-    &.full {
-      grid-column: 1 / 3;
+    & .page {
+      width: 100rem;
+      margin: 0 auto;
+      padding: 10rem 0;
     }
   }
+
+  & .split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  & .full {
+    grid-column: 1 / 3;
+  }
 }
+
 
 #slideshow-header {
   background-image: url(/assets/header-slide-1.png);
@@ -53,8 +83,5 @@ main {
   }
   & h1 {
     align-self: start;
-    font-size: 4.5rem;
-    font-family: Sanchez;
-    color: #F47610;
   }
 }
