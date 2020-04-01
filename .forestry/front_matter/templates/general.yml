@@ -1,4 +1,10 @@
 ---
 label: General
 hide_body: true
-fields: []
+fields:
+- name: icon
+  type: file
+  config:
+    maxSize: 250
+  label: Icon
+  description: Icon used as favicon and pwa icon
