@@ -9,6 +9,7 @@ sections:
   label: Dirtest
   create: documents
   match: "**/*"
+  new_doc_ext: ".json"
 - type: document
   path: test.md
   label: Test
