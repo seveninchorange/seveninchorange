@@ -14,5 +14,3 @@ fields:
     required: false
   label: Site title
   description: Used as page title (displayed in tab)
-pages:
-- content/general.json

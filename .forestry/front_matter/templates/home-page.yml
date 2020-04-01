@@ -17,5 +17,3 @@ fields:
   config:
     maxSize: 250
   label: Logo
-pages:
-- content/home.json
