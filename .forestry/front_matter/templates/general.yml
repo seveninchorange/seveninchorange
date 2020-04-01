@@ -8,5 +8,11 @@ fields:
     maxSize: 250
   label: Icon
   description: Icon used as favicon and pwa icon
+- name: site_title
+  type: text
+  config:
+    required: false
+  label: Site title
+  description: Used as page title (displayed in tab)
 pages:
 - content/general.json
