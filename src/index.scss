@@ -35,7 +35,7 @@ p {
 
 main {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 4fr 6fr;
 
   & .section {
     min-height: 100vh;
@@ -58,6 +58,12 @@ main {
   }
 }
 
+.artist {
+  & img {
+    width: 100%;
+    margin-left: 1.6rem;
+  }
+}
 
 #slideshow-header {
   background-image: url(/assets/header-slide-1.png);
