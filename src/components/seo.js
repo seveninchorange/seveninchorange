@@ -5,84 +5,82 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
-import PropTypes from "prop-types"
-import Helmet from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import React from 'react'
+import PropTypes from 'prop-types'
+import Helmet from 'react-helmet'
+import generalContent from 'content/general.json'
 
-function SEO({ description, lang, meta, title }) {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-          }
-        }
-      }
-    `
-  )
+function SEO ({ description, lang, meta, title }) {
+  const {
+    site_title: siteTitle,
+    icon
+  } = generalContent
 
-  const metaDescription = description || site.siteMetadata.description
+  const metaDescription = description
 
   return (
     <Helmet
       htmlAttributes={{
-        lang,
+        lang
       }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={`%s | ${siteTitle}`}
       meta={[
         {
-          name: `description`,
-          content: metaDescription,
+          name: 'description',
+          content: metaDescription
         },
         {
-          property: `og:title`,
-          content: title,
+          property: 'og:title',
+          content: title
         },
         {
-          property: `og:description`,
-          content: metaDescription,
+          property: 'og:description',
+          content: metaDescription
         },
         {
-          property: `og:type`,
-          content: `website`,
+          property: 'og:type',
+          content: 'website'
         },
         {
-          name: `twitter:card`,
-          content: `summary`,
+          name: 'twitter:card',
+          content: 'summary'
         },
         {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author,
+          name: 'twitter:creator',
+          content: null
         },
         {
-          name: `twitter:title`,
-          content: title,
+          name: 'twitter:title',
+          content: title
         },
         {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
+          name: 'twitter:description',
+          content: metaDescription
+        }
       ].concat(meta)}
+      link={[
+        {
+          rel: 'icon',
+          type: 'image/png',
+          href: icon
+        }
+      ]}
     />
   )
 }
 
 SEO.defaultProps = {
-  lang: `en`,
+  lang: 'en',
   meta: [],
-  description: ``,
+  description: ''
 }
 
 SEO.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired
 }
 
 export default SEO
