@@ -12,3 +12,5 @@ fields:
   config:
     maxSize: 250
   label: Header image
+pages:
+- setup/front-page.json
