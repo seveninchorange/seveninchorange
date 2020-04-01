@@ -1,15 +1,5 @@
-# html-bricks-template
+# seveninchorange
 
-Take a look at [html-bricks](https://github.com/html-bricks/html-bricks) for more info.
+The website built for the band "Seven Inch Orange".
 
-## Develop
-
-`npm install`
-
-Then
-
-`npm start`
-
-## License
-
-Licensed under the MIT license.
+Built with Gatsby.
