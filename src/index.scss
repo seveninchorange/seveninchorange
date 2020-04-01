@@ -12,6 +12,7 @@ body {
 
   * {
     z-index: 100;
+    box-sizing: border-box;
   }
 }
 
@@ -59,9 +60,13 @@ main {
 }
 
 .artist {
-  & img {
+  & .artist-picture {
     width: 100%;
-    margin-left: 1.6rem;
+    padding: 2rem 0 2rem 2rem;
+
+    img {
+      width: 100%;
+    }
   }
 }
 
