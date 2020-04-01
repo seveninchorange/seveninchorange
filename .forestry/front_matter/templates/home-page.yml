@@ -18,4 +18,4 @@ fields:
     maxSize: 250
   label: Logo
 pages:
-- setup/front-page.json
+- content/home.json
