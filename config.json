@@ -1,6 +1,15 @@
 {
   "plugins": [
+    {
+      "resolve": "plugin-ejs",
+      "options": {
+        "content": "src/content.json"
+      }
+    },
     "plugin-sass",
     "plugin-inline-css"
+  ],
+  "ignoreFiles": [
+    "content.json"
   ]
 }
