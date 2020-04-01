@@ -8,3 +8,5 @@ fields:
     maxSize: 250
   label: Icon
   description: Icon used as favicon and pwa icon
+pages:
+- content/general.json
