@@ -2,9 +2,9 @@ window.addEventListener('load', function () {
   let activeSlide = 0
 
   function setActiveSlide (n) {
-    document.getElementById('artist-' + activeSlide).classList.remove('active')
+    document.getElementById(`artist-${activeSlide}`).classList.remove('active')
     activeSlide = n
-    document.getElementById('artist-' + activeSlide).classList.add('active')
+    document.getElementById(`artist-${activeSlide}`).classList.add('active')
   }
 
   const leftButton = document.getElementById('artist-track-left')

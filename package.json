@@ -21,6 +21,7 @@
     "serve": "^11.3.0"
   },
   "dependencies": {
+    "html-bricks-plugin-babel": "0.0.1",
     "html-bricks-plugin-ejs": "0.0.1"
   }
 }

@@ -6,6 +6,7 @@
         "content": "src/content.json"
       }
     },
+    "plugin-babel",
     "plugin-sass",
     "plugin-inline-css"
   ],
