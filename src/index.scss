@@ -54,17 +54,6 @@ main {
   }
 }
 
-.artist {
-  & .artist-picture {
-    width: 100%;
-    padding: 2rem 0 2rem 2rem;
-
-    img {
-      width: 100%;
-    }
-  }
-}
-
 #slideshow-header {
   background-image: url(/assets/header-slide-1.png);
   background-position: center;

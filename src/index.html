@@ -22,18 +22,7 @@
       </div>
       <div class="full section">
         <div class="page">
-          <h2><%= about_members.title %></h2>
-          <% about_members.members.forEach(function (member) { %>
-            <div class="artist split">
-              <div class="artist-description">
-                <h3><%= member.name %></h3>
-                <p><%- member.description %></p>
-              </div>
-              <div class="artist-picture">
-                <img src="https://via.placeholder.com/350" alt="profile picture">
-              </div>
-            </div>
-          <% }) %>
+          <module>artists/artists.html</module>
         </div>
       </div>
     </main>

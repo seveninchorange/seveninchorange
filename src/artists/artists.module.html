@@ -1,0 +1,21 @@
+<module:head>
+  <link rel="stylesheet" type="text/css" href="/artists/artists.css">
+  <script type="text/javascript" src="/artists/artists.js"></script>
+</module:head>
+
+<h2><%= about_members.title %></h2>
+<div class="artist-container" id="artists">
+  <div class="carousel-arrow left" id="artist-track-left"></div>
+  <% about_members.members.forEach(function (member, index) { %>
+    <div class="artist split" id="artist-<%- index %>">
+      <div class="artist-description">
+        <h3><%= member.name %></h3>
+        <p><%- member.description %></p>
+      </div>
+      <div class="artist-picture">
+        <img src="https://via.placeholder.com/350" alt="profile picture">
+      </div>
+    </div>
+  <% }) %>
+  <div class="carousel-arrow right" id="artist-track-right"></div>
+</div>
