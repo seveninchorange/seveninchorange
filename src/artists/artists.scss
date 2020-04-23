@@ -2,33 +2,10 @@
 
 .artist-container {
   display: grid;
-  grid-template-columns: 5rem 1fr 5rem;
+  grid-template-columns: min-content 1fr;
   width: 100%;
-  position: relative;
-
-  & > .carousel-arrow {
-    width: 3rem;
-    height: 3rem;
-
-    align-self: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-
-    cursor: pointer;
-  }
-
-  & > .carousel-arrow.left {
-    grid-column: 1;
-    justify-self: start;
-    background-image: url(/assets/left.svg);
-  }
-
-  & > .carousel-arrow.right {
-    grid-column: 3;
-    justify-self: end;
-    background-image: url(/assets/right.svg);
-  }
+  align-items: start;
+  grid-gap: 2rem;
 }
 
 .artist.active {
@@ -39,22 +16,32 @@
 .artist {
   pointer-events: none;
   opacity: 0;
-  width: $page-width - 10rem;
   grid-row: 1;
   grid-column: 2;
 
   transition: opacity .5s linear;
 
-  & .artist-picture {
-    width: 100%;
-    padding: 2rem 0 2rem 2rem;
-
-    img {
-      width: 100%;
-    }
+  *:first-child {
+    margin-top: 0;
   }
+  *:last-child {
+    margin-bottom: 0;
+  }
+}
 
-  & .artist-description {
-    align-self: center;
+.artist-icons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.5rem;
+
+  .artist-icon {
+    width: 10rem;
+    height: 10rem;
+
+    cursor: pointer;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }

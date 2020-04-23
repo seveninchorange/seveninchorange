@@ -7,17 +7,16 @@ window.addEventListener('load', function () {
     document.getElementById(`artist-${activeSlide}`).classList.add('active')
   }
 
-  const leftButton = document.getElementById('artist-track-left')
-  const rightButton = document.getElementById('artist-track-right')
+  const icons = document.getElementById('artists').getElementsByClassName('artist-icon')
 
-  const items = document.getElementById('artists').getElementsByClassName('artist').length
+  console.log(icons)
 
-  leftButton.addEventListener('click', function () {
-    setActiveSlide((activeSlide + items - 1) % items)
-  })
-  rightButton.addEventListener('click', function () {
-    setActiveSlide((activeSlide + 1) % items)
-  })
+  for (let i = 0; i < icons.length; i++) {
+    const icon = icons[i]
+    icon.addEventListener('click', function () {
+      setActiveSlide(icon.dataset.artistIndex)
+    })
+  }
 
   setActiveSlide(activeSlide)
 })
