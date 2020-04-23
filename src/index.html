@@ -4,6 +4,7 @@
     <title><%= meta.title %></title>
     <link rel="shortcut icon" type="image/png" href="<%= meta.icon %>">
     <link href="https://fonts.googleapis.com/css2?family=Sanchez&display=block" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@700&display=block" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/normalize.css">
     <link rel="stylesheet" type="text/css" href="/index.css">
   </head>
@@ -18,6 +19,7 @@
         <div class="page">
           <h2><%= about_band.title %></h2>
           <p><%- about_band.body.replace(/\n/gi, '</p><p>') %></p>
+          <p class="quote"><span><%- about_band.body_short %></span></p>
           <module>artists/artists.html</module>
         </div>
       </div>

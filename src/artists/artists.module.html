@@ -6,7 +6,7 @@
 <div class="artist-container" id="artists">
   <div class="artist-icons">
     <% about_members.members.forEach(function (member, index) { %>
-      <div class="artist-icon" style="background-image: url(https://via.placeholder.com/350)" data-artist-index="<%- index %>" id="artist-icon-<%- index %>"></div>
+      <div class="artist-icon" style="background-image: url(<%- member.picture %>)" data-artist-index="<%- index %>" id="artist-icon-<%- index %>"></div>
     <% }) %>
   </div>
   <% about_members.members.forEach(function (member, index) { %>

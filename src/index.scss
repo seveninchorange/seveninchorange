@@ -1,3 +1,5 @@
+@import "variables";
+
 html {
   font-size: 62.5%;
 }
@@ -12,8 +14,8 @@ body {
 }
 
 h1, h2, h3, h4 {
-  font-family: Sanchez;
-  color: #F47610;
+  font-family: $header-font;
+  color: $primary-color;
 }
 
 h1 {
@@ -37,6 +39,30 @@ h4 {
 p {
   font-size: 2rem;
   line-height: 1.3em;
+  text-align: justify;
+}
+
+p.quote {
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: $quote-font;
+  position: relative;
+  margin: 5rem 0;
+
+  span {
+    position: relative;
+  }
+
+  &::before {
+    content: "\"";
+    position: absolute;
+    right: -0.2em;
+    top: -0.2em;
+    color: $primary-color;
+    font-size: 7em;
+    line-height: 1em;
+    z-index: 0;
+  }
 }
 
 main {
@@ -48,7 +74,7 @@ main {
     background-color: white;
 
     & .page {
-      width: 100rem;
+      width: $page-width;
       margin: 0 auto;
       padding: 10rem 0;
     }
