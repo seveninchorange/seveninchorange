@@ -7,15 +7,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@700&display=block" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/normalize.css">
     <link rel="stylesheet" type="text/css" href="/index.css">
+    <script type="text/javascript" src="/script.js"></script>
   </head>
   <body>
     <main>
-      <div class="section" id="header">
+      <div class="full section" id="header">
         <img src="<%= header.logo %>" alt="Logo">
         <h1><%= header.title %></h1>
+        <button class="down-arrow" onclick="smoothScrollTo('second-section')"></button>
       </div>
-      <div class="section" id="slideshow-header"></div>
-      <div class="full section">
+      <div class="full section" id="second-section">
         <div class="page">
           <h2><%= about_band.title %></h2>
           <p><%- about_band.body.replace(/\n/gi, '</p><p>') %></p>

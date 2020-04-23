@@ -6,6 +6,7 @@ html {
 
 body {
   font-size: 1.6rem;
+  font-family: Source Sans pro, sans-serif;
 
   * {
     z-index: 100;
@@ -19,7 +20,7 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  font-size: 4.5rem;
+  font-size: 5.5rem;
 }
 
 h2 {
@@ -37,7 +38,7 @@ h4 {
 }
 
 p {
-  font-size: 2rem;
+  font-size: 1.8rem;
   line-height: 1.3em;
   text-align: justify;
 }
@@ -90,29 +91,71 @@ main {
   }
 }
 
-#slideshow-header {
-  background-image: url(/assets/header-slide-1.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100%;
-  width: 100%;
-  z-index: 50;
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    bottom: 5rem;
+  }
+  25% {
+    bottom: 4.5rem;
+  }
+  75% {
+    bottom: 5.5rem;
+  }
 }
 
 #header {
+  background-image: linear-gradient(transparent, #000), url(/assets/header-slide-1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: calc(50vh + 10rem) 1fr;
   grid-template-columns: 1fr;
   justify-items: center;
-  background-color: black;
-  box-shadow: 0px 0px 25px 20px black;
+
+  position: relative;
 
   & img {
-    width: 30vh;
+    width: 29rem;
     align-self: end;
   }
   & h1 {
     align-self: start;
+  }
+
+  & > .down-arrow {
+    background-image: url(/assets/down.svg), linear-gradient($primary-color, $primary-color);
+    background-size: 50%, cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    border: 0;
+    width: 6rem;
+    height: 6rem;
+    outline: none;
+    cursor: pointer;
+
+    position: absolute;
+    bottom: 5rem;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    animation: fadeIn 3s linear, bounce 2s linear infinite;
   }
 }
