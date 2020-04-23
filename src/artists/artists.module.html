@@ -3,16 +3,15 @@
   <script type="text/javascript" src="/artists/artists.js"></script>
 </module:head>
 
-<h2><%= about_members.title %></h2>
 <div class="artist-container" id="artists">
   <div class="artist-icons">
     <% about_members.members.forEach(function (member, index) { %>
-      <div class="artist-icon" style="background-image: url(https://via.placeholder.com/350)" data-artist-index="<%- index %>"></div>
+      <div class="artist-icon" style="background-image: url(https://via.placeholder.com/350)" data-artist-index="<%- index %>" id="artist-icon-<%- index %>"></div>
     <% }) %>
   </div>
   <% about_members.members.forEach(function (member, index) { %>
     <div class="artist" id="artist-<%- index %>">
-      <h3><%= member.name %></h3>
+      <h4><%= member.name %></h4>
       <p><%- member.description %></p>
     </div>
   <% }) %>

@@ -3,8 +3,10 @@ window.addEventListener('load', function () {
 
   function setActiveSlide (n) {
     document.getElementById(`artist-${activeSlide}`).classList.remove('active')
+    document.getElementById(`artist-icon-${activeSlide}`).classList.remove('active')
     activeSlide = n
     document.getElementById(`artist-${activeSlide}`).classList.add('active')
+    document.getElementById(`artist-icon-${activeSlide}`).classList.add('active')
   }
 
   const icons = document.getElementById('artists').getElementsByClassName('artist-icon')
