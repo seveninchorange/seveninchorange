@@ -62,5 +62,18 @@ fields:
   - type: textarea
     name: body
     label: body
+- name: contact
+  type: field_group_list
+  fields:
+  - name: title
+    type: text
+    config:
+      required: false
+    label: Title
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: contact
 pages:
 - src/content.json
