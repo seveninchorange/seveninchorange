@@ -7,8 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "html-bricks --watch",
     "build": "html-bricks",
-    "serve": "serve ./build",
-    "start": "run-p watch serve"
+    "serve": "serve ./build -p 8080",
+    "start": "run-p watch serve",
+    "forestry:preview": "npm run start"
   },
   "keywords": [],
   "author": "",
