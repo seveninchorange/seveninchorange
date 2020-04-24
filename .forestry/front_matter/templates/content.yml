@@ -1,0 +1,67 @@
+---
+label: Content
+hide_body: true
+fields:
+- type: field_group
+  name: meta
+  label: meta
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: file
+    name: icon
+    label: icon
+- type: field_group
+  name: header
+  label: header
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: file
+    name: logo
+    label: logo
+  - type: text
+    name: test
+    label: test
+- type: field_group
+  name: about_band
+  label: about_band
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: textarea
+    name: body
+    label: body
+- type: field_group
+  name: about_members
+  label: about_members
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: field_group_list
+    name: members
+    label: members
+    fields:
+    - type: text
+      name: name
+      label: name
+    - type: textarea
+      name: description
+      label: description
+    - type: file
+      name: picture
+      label: picture
+- type: field_group
+  name: about_music
+  label: about_music
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: textarea
+    name: body
+    label: body
