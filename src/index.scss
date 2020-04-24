@@ -53,8 +53,11 @@ blockquote {
   font-weight: bold;
   font-family: $quote-font;
   position: relative;
-  margin: 5rem 0;
+  padding: 5rem 0;
+  margin: 0;
   text-align: center;
+  break-after: avoid;
+  display: block;
 
   span {
     position: relative;
@@ -64,7 +67,7 @@ blockquote {
     content: "\"";
     position: absolute;
     right: -0.2em;
-    top: -0.2em;
+    top: 0.1em;
     color: $primary-color;
     font-size: 7em;
     line-height: 1em;
@@ -81,8 +84,8 @@ main {
 
     &::before {
       content: "";
-      clear: both;
-      page-break-before: always;
+      display: block;
+      break-after: page;
     }
 
     & .page {
@@ -166,5 +169,15 @@ main {
     transform: translateX(-50%);
 
     animation: fadeIn 3s linear, bounce 2s linear infinite;
+  }
+}
+
+@media print {
+  blockquote {
+    margin: 0 4rem;
+  }
+
+  main .section .page {
+    padding: 0;
   }
 }

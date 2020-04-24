@@ -12,6 +12,7 @@
   <% about_members.members.forEach(function (member, index) { %>
     <div class="artist" id="artist-<%- index %>">
       <!-- <h4><%= member.name %></h4> -->
+      <img src="<%- member.picture %>" alt="Profile picture" class="artist-print-picture">
       <p><%- member.description %></p>
     </div>
   <% }) %>

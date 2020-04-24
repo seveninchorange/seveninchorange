@@ -28,6 +28,13 @@
     opacity: 1;
     pointer-events: all;
   }
+
+  & .artist-print-picture {
+    display: none;
+    width: 15rem;
+    border-radius: 5px;
+    margin: 2rem 0;
+  }
 }
 
 .artist-icons {
@@ -59,6 +66,26 @@
     }
     &:hover {
       opacity: 1;
+    }
+  }
+}
+
+@media print {
+  .artist-icons {
+    display: none;
+  }
+
+  .artist-container {
+    display: block;
+    margin: 0;
+  }
+
+  .artist {
+    opacity: 1;
+    pointer-events: all;
+
+    & .artist-print-picture {
+      display: block;
     }
   }
 }
