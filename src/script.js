@@ -1,8 +1,8 @@
-window.addEventListener('load', function () {
-  let id = 0
+let scrollId = 0
 
+const smoothScrollTo = window.smoothScrollTo = (elId) => {
   function increment (y, handlerId) {
-    if (id !== handlerId) {
+    if (scrollId !== handlerId) {
       return
     }
 
@@ -11,22 +11,30 @@ window.addEventListener('load', function () {
       return
     }
 
-    window.scrollBy(0, Math.max(1, (y - window.scrollY) / 15))
+    const scrollBy = (y - window.scrollY) / 15
+    if (scrollBy < 0) {
+      window.scrollBy(0, Math.min(-1, scrollBy))
+    } else {
+      window.scrollBy(0, Math.max(1, scrollBy))
+    }
 
     setTimeout(() => increment(y, handlerId), 10)
   }
 
-  function smoothScrollTo (elId) {
-    const el = document.getElementById(elId)
-    if (el) {
-      const y = el.getBoundingClientRect().y + window.scrollY
+  scrollId++
+  const el = document.getElementById(elId)
+  if (el) {
+    const y = el.getBoundingClientRect().y + window.scrollY
 
-      increment(y, id)
-    }
+    console.log(y, window.scrollY)
+
+    increment(y, scrollId)
   }
+}
 
+window.addEventListener('load', function () {
   window.addEventListener('wheel', function () {
-    id++
+    scrollId++
   })
 
   const navigationElements = document.querySelectorAll('[data-navigate-to]')
