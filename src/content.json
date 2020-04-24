@@ -5,7 +5,8 @@
   },
   "header": {
     "title": "Seven Inch Orange",
-    "logo": "/assets/logo.svg"
+    "logo": "/assets/logo.svg",
+    "test": "swag"
   },
   "about_band": {
     "title": "Om bandet",
