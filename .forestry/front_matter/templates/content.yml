@@ -65,6 +65,42 @@ fields:
 - name: contact
   type: field_group
   config: {}
+  fields:
+  - name: title
+    type: text
+    config:
+      required: false
+    label: Title
+  - name: contact_title
+    type: text
+    config:
+      required: false
+    label: Contact title
+  - name: contact_name
+    type: text
+    config:
+      required: false
+    label: Contact name
+  - name: contact_email
+    type: text
+    config:
+      required: false
+    label: Contact email
+  - name: contact_phone
+    type: text
+    config:
+      required: false
+    label: Contact phone
+  - name: facebook_title
+    type: text
+    config:
+      required: false
+    label: Facebook title
+  - name: facebook_link
+    type: text
+    config:
+      required: false
+    label: Facebook link
   label: Contact
 pages:
 - src/content.json
