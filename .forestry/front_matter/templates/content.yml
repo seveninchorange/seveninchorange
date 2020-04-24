@@ -22,9 +22,6 @@ fields:
   - type: file
     name: logo
     label: logo
-  - type: text
-    name: test
-    label: test
 - type: field_group
   name: about_band
   label: about_band
