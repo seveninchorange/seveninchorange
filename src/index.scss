@@ -93,6 +93,10 @@ main {
       margin: 0 auto;
       padding: 10rem 0;
     }
+
+    &.screen {
+      min-height: 100vh;
+    }
   }
 
   & .full {
@@ -172,6 +176,33 @@ main {
   }
 }
 
+.video {
+  margin: 10rem auto 0;
+  display: block;
+}
+
+.contact-table {
+  margin: 0 auto;
+  background-color: #e8e8e8;
+  padding: 3rem 6rem;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 0px #aaa;
+
+  td {
+    vertical-align: top;
+
+    &:first-child {
+      padding-right: 1.5rem;
+    }
+
+    p {
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
 @media print {
   blockquote {
     margin: 0 4rem;
@@ -179,5 +210,9 @@ main {
 
   main .section .page {
     padding: 0;
+  }
+
+  .video {
+    display: none;
   }
 }

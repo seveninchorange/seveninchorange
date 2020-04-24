@@ -24,7 +24,7 @@ const smoothScrollTo = window.smoothScrollTo = (elId) => {
   scrollId++
   const el = document.getElementById(elId)
   if (el) {
-    const y = el.getBoundingClientRect().y + window.scrollY
+    const y = Math.min(el.getBoundingClientRect().y + window.scrollY, document.body.scrollHeight - window.innerHeight)
 
     console.log(y, window.scrollY)
 

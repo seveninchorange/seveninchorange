@@ -29,11 +29,34 @@
         <div class="page">
           <h2><%= about_music.title %></h2>
           <p><%- parseBody(about_music.body) %></p>
+          <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/Z3xXUWUh-zM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
-      <div class="full section">
+      <div class="full section screen">
         <div class="page">
-          <module>header-video/header-video.html</module>
+          <h2><%= contact.title %></h2>
+          <table class="contact-table">
+            <tbody>
+              <tr>
+                <td>
+                  <p><%= contact.contact_title %></p>
+                </td>
+                <td>
+                  <p><%= contact.contact_name %></p>
+                  <p><%= contact.contact_email %></p>
+                  <p><%= contact.contact_phone %></p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p><%= contact.facebook_title %></p>
+                </td>
+                <td>
+                  <p><a href="<%= contact.facebook_link %>">Facebook</a></p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </main>

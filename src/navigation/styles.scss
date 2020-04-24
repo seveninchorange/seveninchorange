@@ -4,13 +4,11 @@ nav {
   position: fixed;
   left: calc(53vw + (#{$page-width} / 2));
   top: 30%;
-  transform: translate3d(100%, 0, 0);
   z-index: 1000;
   opacity: 0;
-  transition: all .3s ease-out;
+  transition: opacity .3s ease-out;
 
   &.active {
-    transform: translate3d(0, 0, 0);
     opacity: 1;
   }
 

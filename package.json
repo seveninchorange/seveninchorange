@@ -23,6 +23,6 @@
   },
   "dependencies": {
     "html-bricks-plugin-babel": "0.0.1",
-    "html-bricks-plugin-ejs": "^0.1.0"
+    "html-bricks-plugin-ejs": "^0.1.1"
   }
 }
