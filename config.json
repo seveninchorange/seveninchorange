@@ -3,7 +3,8 @@
     {
       "resolve": "plugin-ejs",
       "options": {
-        "content": "src/content.json"
+        "content": "src/content.json",
+        "functions": "src/functions.js"
       }
     },
     "plugin-babel",
@@ -11,6 +12,7 @@
     "plugin-inline-css"
   ],
   "ignoreFiles": [
-    "content.json"
+    "content.json",
+    "functions.js"
   ]
 }

@@ -20,14 +20,15 @@
       <div class="full section" id="second-section">
         <div class="page">
           <h2><%= about_band.title %></h2>
-          <p><%- about_band.body.replace(/\n/gi, '</p><p>') %></p>
+          <p><%- parseBody(about_band.body) %></p>
           <p class="quote"><span><%- about_band.body_short %></span></p>
           <module>artists/artists.html</module>
         </div>
       </div>
       <div class="full section">
         <div class="page">
-          <h2>Om musikken</h2>
+          <h2><%= about_music.title %></h2>
+          <p><%- parseBody(about_music.body) %></p>
         </div>
       </div>
       <div class="full section">

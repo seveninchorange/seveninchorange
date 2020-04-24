@@ -41,14 +41,20 @@ p {
   font-size: 1.8rem;
   line-height: 1.3em;
   text-align: justify;
+
+  & > strong {
+    font-family: $header-font;
+    color: $primary-color;
+  }
 }
 
-p.quote {
+blockquote {
   font-size: 2.5rem;
   font-weight: bold;
   font-family: $quote-font;
   position: relative;
   margin: 5rem 0;
+  text-align: center;
 
   span {
     position: relative;
