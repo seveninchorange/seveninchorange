@@ -10,6 +10,8 @@
     <script type="text/javascript" src="/script.js"></script>
   </head>
   <body>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/da_DK/sdk.js#xfbml=1&version=v6.0"></script>
     <main>
       <module>navigation/navigation.html</module>
       <div class="header">
@@ -35,28 +37,19 @@
       <div class="full section screen">
         <div class="page">
           <h2><%= contact.title %></h2>
-          <table class="contact-table">
-            <tbody>
-              <tr>
-                <td>
-                  <p><%= contact.contact_title %></p>
-                </td>
-                <td>
-                  <p><%= contact.contact_name %></p>
-                  <p><%= contact.contact_email %></p>
-                  <p><%= contact.contact_phone %></p>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <p><%= contact.facebook_title %></p>
-                </td>
-                <td>
-                  <p><a href="<%= contact.facebook_link %>">Facebook</a></p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="contact-info">
+            <div class="fb-widget">
+              <div class="fb-page" data-href="https://www.facebook.com/SevenInchOrange/" data-tabs="" data-width="500" data-height="70" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
+            </div>
+            <div class="center">
+              <p><%= contact.contact_title %></p>
+            </div>
+            <div>
+              <p><%= contact.contact_name %></p>
+              <p><%= contact.contact_email %></p>
+              <p><%= contact.contact_phone %></p>
+            </div>
+          </div>
         </div>
       </div>
     </main>

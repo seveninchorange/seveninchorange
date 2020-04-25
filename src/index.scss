@@ -181,27 +181,37 @@ main {
   display: block;
 }
 
-.contact-table {
+.contact-info {
+  width: 500px;
+  display: grid;
+  gap: 3rem 2rem;
+  grid-template-columns: 3fr 5fr;
+
   margin: 0 auto;
   background-color: #e8e8e8;
-  padding: 3rem 6rem;
+  padding-bottom: 3rem;
   border-radius: 5px;
   box-shadow: 0px 0px 10px 0px #aaa;
+  overflow: hidden;
 
-  td {
-    vertical-align: top;
+  & > .center p {
+    text-align: center;
+  }
 
-    &:first-child {
-      padding-right: 1.5rem;
-    }
+  .fb-widget {
+    width: 500px;
+    height: 130px;
+    grid-column: 1 / 3;
 
-    p {
-      &:first-child {
-        margin-top: 0;
+    blockquote {
+      all: initial;
+      * {
+        all: initial;
       }
     }
   }
 }
+
 
 @media print {
   blockquote {
